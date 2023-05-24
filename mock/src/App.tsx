@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import { Form } from './components/Form'
+import { MainPage } from './components/MainPage'
 
 function App() {
 
   return (
     <div>
-      <Form />
+      <MainPage />
     </div>
   )
 }
