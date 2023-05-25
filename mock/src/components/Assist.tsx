@@ -19,7 +19,7 @@ export const Assist = (props: Props) => {
     return (
         <Container maxWidth="md">
             <Typography variant="h4">ヒント</Typography>
-            <Container maxWidth="md">
+            <Container maxWidth="md" sx={{marginBottom: "30px"}}>
                 <Stack spacing={2}>
                     {hintList.map((hint, index) => {
                         return (
