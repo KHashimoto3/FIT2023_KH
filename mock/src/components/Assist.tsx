@@ -4,13 +4,16 @@ export const Assist = () => {
 
     const hintList = [
         {
-            "hint": "ヒント１"
+            "hint": "ヒント１",
+            "explanation": "説明１"
         },
         {
-            "hint": "ヒント２"
+            "hint": "ヒント２",
+            "explanation": "説明２"
         },
         {
-            "hint": "ヒント３"
+            "hint": "ヒント３",
+            "explanation": "説明３"
         }
     ];
 
