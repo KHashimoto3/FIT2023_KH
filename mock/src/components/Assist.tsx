@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Container } from "@mui/material";
 
 type Props = {
@@ -12,16 +13,21 @@ interface HintList {
 export const Assist = (props: Props) => {
     //ヒントのリスト（MainPageから渡された）
     const hintList: HintList[] = props.hintList;
-    
+
+    const [hintIndex, setHintIndex] = useState<number>(0);
+
     return (
         <Container maxWidth="md">
             <h1>Assist</h1>
             {hintList.map((hint, index) => {
                 return (
-                    <p>ヒント{index + 1}: {hint.hint}</p>
+                    <>
+                    ヒント{index + 1}: {hint.hint}<button onClick={() => setHintIndex(index)}>ヒントを見る</button><br />
+                    </>
                 )
             })
             }
+            <h2>説明：{hintList[hintIndex].explanation}</h2>
         </Container>
     )
 };
