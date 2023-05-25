@@ -1,6 +1,11 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { useState } from "react";
+import { Box, Grid } from "@mui/material";
 import { Assist } from "./Assist";
 import { Form } from "./Form";
+
+interface FormData {
+    hintList: HintList[];
+}
 
 interface HintList {
     hint: string;
@@ -8,14 +13,31 @@ interface HintList {
 }
 
 export const MainPage = () => {
-    const hintList: HintList[] = [
+    const [formDataIndex, setFormDataIndex] = useState<number>(0);
+    const formData: FormData[] = [
         {
-            "hint": "forの書き方がわからない",
-            "explanation": "説明１"
+            "hintList": [
+                {
+                    "hint": "forの書き方がわからない",
+                    "explanation": "説明１"
+                },
+                {
+                    "hint": "どのような値を設定すればよいのかわからない（問題理解）",
+                    "explanation": "説明2"
+                },
+            ]
         },
         {
-            "hint": "どのような値を設定すればよいのかわからない（問題理解）",
-            "explanation": "説明2"
+            "hintList": [
+                {
+                    "hint": "関数の宣言の仕方がわからない",
+                    "explanation": "説明１"
+                },
+                {
+                    "hint": "どのような値を設定すればよいのかわからない（問題理解）",
+                    "explanation": "説明2"
+                },
+            ]
         },
     ];
 
@@ -24,7 +46,7 @@ export const MainPage = () => {
             <Box>
             <Grid container spacing={2}>
                 <Grid item xs={5}>
-                    <Assist hintList={hintList} />
+                    <Assist hintList={formData[formDataIndex].hintList} />
                 </Grid>
                 <Grid item xs={7}>
                     <Form />
