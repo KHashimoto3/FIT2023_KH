@@ -19,18 +19,20 @@ export const Assist = (props: Props) => {
     return (
         <Container maxWidth="md">
             <h1>ヒント</h1>
-            <Stack spacing={2}>
-            {hintList.map((hint, index) => {
-                return (
-                    <Card key={index} style={{padding: "10px"}}>
-                        <Typography variant="h6" style={{color: "#0288d1"}}>ヒント{index + 1}</Typography>
-                        <Typography variant="h5">{hint.hint}</Typography>
-                        <Button size="small"  onClick={() => setHintIndex(index)}>ヒントを見る</Button>
-                    </Card>
-                )
-            })
-            }
-            </Stack>
+                <Container maxWidth="md">
+                    <Stack spacing={2}>
+                        {hintList.map((hint, index) => {
+                            return (
+                                <Card key={index} style={{padding: "10px"}} sx={{ maxWidth: "300px"}}>
+                                    <Typography variant="h6" style={{color: "#0288d1"}}>ヒント{index + 1}</Typography>
+                                    <Typography variant="h5">{hint.hint}</Typography>
+                                    <Button size="small"  onClick={() => setHintIndex(index)}>ヒントを見る</Button>
+                                 </Card>
+                            )
+                        })
+                        }
+                    </Stack>
+                </Container>
             <h2>説明：{hintList[hintIndex].explanation}</h2>
         </Container>
     )

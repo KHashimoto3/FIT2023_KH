@@ -24,10 +24,10 @@ export const MainPage = () => {
             <h1>MainPage</h1>
             <Box>
             <Grid container spacing={2}>
-                <Grid item xs={5} style={{"background": "#fff7d4", height: "500px"}}>
+                <Grid item xs={5}>
                     <Assist hintList={hintList} />
                 </Grid>
-                <Grid item xs={7} style={{"background": "#d4f4ff", height: "500px"}}>
+                <Grid item xs={7}>
                     <Form />
                 </Grid>
             </Grid>
