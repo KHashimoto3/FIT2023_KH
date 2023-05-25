@@ -1,4 +1,4 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { Assist } from "./Assist";
 import { Form } from "./Form";
 
@@ -21,7 +21,6 @@ export const MainPage = () => {
 
     return (
         <div>
-            <h1>MainPage</h1>
             <Box>
             <Grid container spacing={2}>
                 <Grid item xs={5}>
