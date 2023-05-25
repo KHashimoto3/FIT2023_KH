@@ -4,17 +4,13 @@ export const Assist = () => {
 
     const hintList = [
         {
-            "hint": "ヒント１",
+            "hint": "forの書き方がわからない",
             "explanation": "説明１"
         },
         {
-            "hint": "ヒント２",
+            "hint": "どのような値を設定すればよいのかわからない（問題理解）",
             "explanation": "説明２"
         },
-        {
-            "hint": "ヒント３",
-            "explanation": "説明３"
-        }
     ];
 
     return (
