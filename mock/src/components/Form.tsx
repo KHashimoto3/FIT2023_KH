@@ -1,8 +1,10 @@
+import { Container } from "@mui/material";
+
 export const Form = () => {
 
     return (
-        <div>
+        <Container maxWidth="md">
             <h1>Form</h1>
-        </div>
+        </Container>
     )
 };

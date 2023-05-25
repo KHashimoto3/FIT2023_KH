@@ -1,8 +1,10 @@
+import { Container } from "@mui/material";
+
 export const Assist = () => {
 
     return (
-        <div>
+        <Container maxWidth="md">
             <h1>Assist</h1>
-        </div>
+        </Container>
     )
 };
