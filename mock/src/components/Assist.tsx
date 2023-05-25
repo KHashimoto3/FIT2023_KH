@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container } from "@mui/material";
+import { Button, Card, Container, Stack, Typography } from "@mui/material";
 
 type Props = {
     hintList: HintList[];
@@ -19,14 +19,18 @@ export const Assist = (props: Props) => {
     return (
         <Container maxWidth="md">
             <h1>Assist</h1>
+            <Stack spacing={2}>
             {hintList.map((hint, index) => {
                 return (
-                    <>
-                    ヒント{index + 1}: {hint.hint}<button onClick={() => setHintIndex(index)}>ヒントを見る</button><br />
-                    </>
+                    <Card key={index} style={{padding: "10px"}}>
+                        <Typography variant="h6">ヒント{index + 1}</Typography>
+                        <Typography variant="h5">{hint.hint}</Typography>
+                        <Button size="small"  onClick={() => setHintIndex(index)}>ヒントを見る</Button>
+                    </Card>
                 )
             })
             }
+            </Stack>
             <h2>説明：{hintList[hintIndex].explanation}</h2>
         </Container>
     )
