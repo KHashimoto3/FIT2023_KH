@@ -1,18 +1,18 @@
 import { Container } from "@mui/material";
 
-export const Assist = () => {
+type Props = {
+    hintList: HintList[];
+}
 
-    const hintList = [
-        {
-            "hint": "forの書き方がわからない",
-            "explanation": "説明１"
-        },
-        {
-            "hint": "どのような値を設定すればよいのかわからない（問題理解）",
-            "explanation": "説明２"
-        },
-    ];
+interface HintList {
+    hint: string;
+    explanation: string;
+}
 
+export const Assist = (props: Props) => {
+    //ヒントのリスト（MainPageから渡された）
+    const hintList: HintList[] = props.hintList;
+    
     return (
         <Container maxWidth="md">
             <h1>Assist</h1>
