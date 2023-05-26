@@ -23,10 +23,10 @@ export const Assist = (props: Props) => {
                 <Stack spacing={2} sx={{marginBottom: "30px"}}>
                     {hintList.map((hint, index) => {
                         return (
-                            <Card key={index} style={{padding: "10px"}} sx={{ maxWidth: "300px"}}>
+                            <Card key={index} style={{padding: "10px"}} sx={{ maxWidth: "500px"}}>
                                 <Typography variant="h6" style={{color: "#0288d1"}}>ヒント{index + 1}</Typography>
                                 <Typography variant="h5">{hint.hint}</Typography>
-                                <Button size="small"  onClick={() => setHintIndex(index)}>ヒントを見る</Button>
+                                <Button size="small"  onClick={() => setHintIndex(index)}>説明を見る</Button>
                              </Card>
                         )
                     })

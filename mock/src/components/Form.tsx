@@ -15,16 +15,14 @@ export const Form = (props: Props) => {
     return (
         <Container maxWidth="md">
             <Typography variant="h4">フォーム</Typography>
-            <input type="text" size={20} onChange={(event) => setFormValue(event.target.value)} onFocus={() => changeFormDataIndex(0)} /><br />
-            <input type="text" size={20} onChange={(event) => setFormValue2(event.target.value)} onFocus={() => changeFormDataIndex(1)} /><br />
 
             <pre>
-                <textarea cols={50} rows={2}/><br />
+                <textarea cols={50} rows={2} onFocus={() => changeFormDataIndex(0)} /><br />
                 int main(void){'{\n'}
-                {'\t'}<textarea cols={50} rows={2}/><br />
+                {'\t'}<textarea cols={50} rows={2} onFocus={() => changeFormDataIndex(1)} /><br />
                 {'\t'}//入力値を受け取る{'\n'}
-                {'\t'}for {'('}<input type="text" size={20} />{') {\n'}
-                {'\t'}{'\t'}<textarea cols={50} rows={2}/><br />
+                {'\t'}for {'('}<input type="text" size={20} onFocus={() => changeFormDataIndex(2)} />{') {\n'}
+                {'\t'}{'\t'}<textarea cols={50} rows={2} onFocus={() => changeFormDataIndex(3)} /><br />
             </pre>
         </Container>
     )
