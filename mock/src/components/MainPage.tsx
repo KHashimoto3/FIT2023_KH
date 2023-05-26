@@ -14,6 +14,11 @@ interface HintList {
 
 export const MainPage = () => {
     const [formDataIndex, setFormDataIndex] = useState<number>(0);
+
+    const changeFormDataIndex = (index: number) => {
+        setFormDataIndex(index);
+    };
+
     const formData: FormData[] = [
         {
             "hintList": [
@@ -49,7 +54,7 @@ export const MainPage = () => {
                     <Assist hintList={formData[formDataIndex].hintList} />
                 </Grid>
                 <Grid item xs={7}>
-                    <Form />
+                    <Form changeFormDataIndex={changeFormDataIndex} />
                 </Grid>
             </Grid>
             </Box>
