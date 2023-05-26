@@ -20,7 +20,7 @@ export const Assist = (props: Props) => {
         <Container maxWidth="md">
             <Typography variant="h4">ヒント</Typography>
             <Container maxWidth="md" sx={{marginBottom: "30px"}}>
-                <Stack spacing={2}>
+                <Stack spacing={2} sx={{marginBottom: "30px"}}>
                     {hintList.map((hint, index) => {
                         return (
                             <Card key={index} style={{padding: "10px"}} sx={{ maxWidth: "300px"}}>
@@ -32,6 +32,11 @@ export const Assist = (props: Props) => {
                     })
                 }
                  </Stack>
+                <hr />
+                <Stack spacing={2}>
+                    <Button size="small" variant="contained">知りたい情報はこの中にない</Button>
+                    <Button size="small" variant="contained">今はつまずいていない</Button>
+                </Stack>
             </Container>
             <Typography variant="h4">説明：</Typography>
             <Typography variant="h5">{hintList[hintIndex].explanation}</Typography>
