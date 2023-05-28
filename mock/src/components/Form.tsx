@@ -21,7 +21,7 @@ export const Form = (props: Props) => {
                 int main(void){'{\n'}
                 {'\t'}<textarea cols={50} rows={2} onFocus={() => changeFormDataIndex(1)} /><br />
                 {'\t'}//入力値を受け取る{'\n'}
-                {'\t'}for {'('}<input type="text" size={20} onFocus={() => changeFormDataIndex(2)} />{') {\n'}
+                {'\t'}for {'('}<input type="text" size={5} onFocus={() => changeFormDataIndex(2)} />{'; '}<input type="text" size={5} onFocus={() => changeFormDataIndex(2)} />{'; '}<input type="text" size={5} onFocus={() => changeFormDataIndex(2)} />{') {\n'}
                 {'\t'}{'\t'}<textarea cols={50} rows={2} onFocus={() => changeFormDataIndex(3)} /><br />
             </pre>
         </Container>
