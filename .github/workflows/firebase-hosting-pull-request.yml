@@ -6,10 +6,10 @@ name: Deploy to Firebase Hosting on PR
 jobs:
   build_and_preview:
     if: "${{ github.event.pull_request.head.repo.full_name == github.repository }}"
+    working-directory: mock
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: cd mock
       - run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:

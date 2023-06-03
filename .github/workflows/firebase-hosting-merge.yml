@@ -8,10 +8,10 @@ name: Deploy to Firebase Hosting on merge
       - main
 jobs:
   build_and_deploy:
+    working-directory: mock
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: cd mock
       - run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
