@@ -16,30 +16,45 @@ export const Assist = (props: Props) => {
 
     const [hintIndex, setHintIndex] = useState<number>(0);
 
-    return (
-        <Container maxWidth="md">
-            <Typography variant="h4">ヒント</Typography>
-            <Container maxWidth="md" sx={{marginBottom: "30px"}}>
-                <Stack spacing={2} sx={{marginBottom: "30px"}}>
-                    {hintList.map((hint, index) => {
-                        return (
-                            <Card key={index} style={{padding: "10px"}} sx={{ maxWidth: "500px"}}>
-                                <Typography variant="h6" style={{color: "#0288d1"}}>ヒント{index + 1}</Typography>
-                                <Typography variant="h5">{hint.hint}</Typography>
-                                <Button size="small"  onClick={() => setHintIndex(index)}>説明を見る</Button>
-                             </Card>
-                        )
-                    })
-                }
-                 </Stack>
-                <hr />
-                <Stack spacing={2}>
-                    <Button size="small" variant="contained">知りたい情報はこの中にない</Button>
-                    <Button size="small" variant="contained">今はつまずいていない</Button>
-                </Stack>
+    const [explainIsShow, setExplainIsShow] = useState<boolean>(false);
+
+    const showExplain = (index: number) => {
+        setHintIndex(index);
+        setExplainIsShow(true);
+    }
+
+    if (!explainIsShow) {
+        return (
+            <Container maxWidth="md">
+                <Typography variant="h4">ヒント</Typography>
+                <Container maxWidth="md" sx={{marginBottom: "30px"}}>
+                    <Stack spacing={2} sx={{marginBottom: "30px"}}>
+                        {hintList.map((hint, index) => {
+                            return (
+                                <Card key={index} style={{padding: "10px"}} sx={{ maxWidth: "500px"}}>
+                                    <Typography variant="h6" style={{color: "#0288d1"}}>ヒント{index + 1}</Typography>
+                                    <Typography variant="h5">{hint.hint}</Typography>
+                                    <Button size="small"  onClick={() => showExplain(index)}>説明を見る</Button>
+                                 </Card>
+                            )
+                        })
+                    }
+                     </Stack>
+                    <hr />
+                    <Stack spacing={2}>
+                        <Button size="small" variant="contained">知りたい情報はこの中にない</Button>
+                        <Button size="small" variant="contained">今はつまずいていない</Button>
+                    </Stack>
+                </Container>
             </Container>
-            <Typography variant="h4">説明：</Typography>
-            <Typography variant="h5">{hintList[hintIndex].explanation}</Typography>
-        </Container>
-    )
+        )
+    } else {
+        return (
+            <Container maxWidth="md">
+                <Typography variant="h4">解説</Typography>
+                <Button size="small" variant="contained" onClick={() => setExplainIsShow(false)}>戻る</Button>
+                <Typography variant="h5">説明：{hintList[hintIndex].explanation}</Typography>
+            </Container>
+        )
+    }
 };
