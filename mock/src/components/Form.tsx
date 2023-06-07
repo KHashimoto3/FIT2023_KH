@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Container, Typography } from "@mui/material";
 
 type Props = {
@@ -6,8 +5,6 @@ type Props = {
 };
 
 export const Form = (props: Props) => {
-    const [formValue, setFormValue] = useState<string>("");
-    const [formValue2, setFormValue2] = useState<string>("");
 
     //MainPageから渡された、ヒントのリストのインデックスを変更する関数
     const changeFormDataIndex = props.changeFormDataIndex;
