@@ -35,14 +35,14 @@ export const Form = (props: Props) => {
 
             <pre style={preStyle}>
                 <pre style={commentStyle}>/**</pre>
-                <textarea style={commentStyle} cols={40} rows={2} /><br />
+                <textarea style={commentStyle} cols={40} rows={2} onFocus={() => changeFormDataIndex(0)}  /><br />
                 <pre style={commentStyle}>*/</pre>
-                <textarea style={textAreaStyle} cols={40} rows={2} onFocus={() => changeFormDataIndex(0)} /><br />
+                <textarea style={textAreaStyle} cols={40} rows={2} onFocus={() => changeFormDataIndex(1)} /><br />
                 int main(void){'{\n'}
-                {'\t'}<textarea style={textAreaStyle} cols={40} rows={2} onFocus={() => changeFormDataIndex(1)} /><br />
+                {'\t'}<textarea style={textAreaStyle} cols={40} rows={2} onFocus={() => changeFormDataIndex(2)} /><br />
                 {'\t'}//入力値を受け取る{'\n'}
-                {'\t'}for {'('}<input style={inputStyle} type="text" size={5} onFocus={() => changeFormDataIndex(2)} />{'; '}<input style={inputStyle} type="text" size={5} onFocus={() => changeFormDataIndex(2)} />{'; '}<input style={inputStyle} type="text" size={5} onFocus={() => changeFormDataIndex(2)} />{') {\n'}
-                {'\t'}{'\t'}<textarea style={textAreaStyle} cols={40} rows={2} onFocus={() => changeFormDataIndex(3)} /><br />
+                {'\t'}for {'('}<input style={inputStyle} type="text" size={5} onFocus={() => changeFormDataIndex(3)} />{'; '}<input style={inputStyle} type="text" size={5} onFocus={() => changeFormDataIndex(3)} />{'; '}<input style={inputStyle} type="text" size={5} onFocus={() => changeFormDataIndex(3)} />{') {\n'}
+                {'\t'}{'\t'}<textarea style={textAreaStyle} cols={40} rows={2} onFocus={() => changeFormDataIndex(4)} /><br />
                 {'\t'}{'}'}<br />
                 {'\t'}return 0;<br />
                 {'}'}

@@ -27,6 +27,18 @@ export const MainPage = () => {
                     "explanation": "説明１"
                 },
                 {
+                    "hint": "ヘッダコメントの書き方がわからない",
+                    "explanation": "説明2"
+                },
+            ]
+        },
+        {
+            "hintList": [
+                {
+                    "hint": "どのような処理を書けばよいのかわからない",
+                    "explanation": "説明１"
+                },
+                {
                     "hint": "プロトタイプ宣言・インクルードの書き方がわからない",
                     "explanation": "説明2"
                 },
