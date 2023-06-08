@@ -25,7 +25,7 @@ export const MainPage = () => {
             "stepName": "ヘッダコメント",
             "hintList": [
                 {
-                    "hint": "どのような処理を書けばよいのかわからない",
+                    "hint": "何を書くパートなのかわからない",
                     "explanation": "説明１"
                 },
                 {
@@ -38,7 +38,7 @@ export const MainPage = () => {
             "stepName": "インクルード・マクロ定義",
             "hintList": [
                 {
-                    "hint": "どのような処理を書けばよいのかわからない",
+                    "hint": "何を書くパートなのかわからない",
                     "explanation": "説明１"
                 },
                 {
@@ -55,7 +55,7 @@ export const MainPage = () => {
             "stepName": "変数・配列の宣言",
             "hintList": [
                 {
-                    "hint": "どのような処理を書けばよいのかわからない",
+                    "hint": "何を書くパートなのかわからない",
                     "explanation": "説明１"
                 },
                 {
@@ -72,7 +72,7 @@ export const MainPage = () => {
             "stepName": "繰り返し処理",
             "hintList": [
                 {
-                    "hint": "どのような処理を書けばよいのかわからない",
+                    "hint": "何を書くパートなのかわからない",
                     "explanation": "説明１"
                 },
                 {
@@ -93,7 +93,7 @@ export const MainPage = () => {
             "stepName": "複数条件分岐",
             "hintList": [
                 {
-                    "hint": "どのような処理を書けばよいのかわからない",
+                    "hint": "何を書くパートなのかわからない",
                     "explanation": "説明１"
                 },
                 {
