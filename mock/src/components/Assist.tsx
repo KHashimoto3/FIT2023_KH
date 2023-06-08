@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Button, Card, Container, Stack, Typography } from "@mui/material";
 
 type Props = {
+    stepNo: number;
+    stepName: string;
     hintList: HintList[];
 }
 
@@ -13,6 +15,8 @@ interface HintList {
 export const Assist = (props: Props) => {
     //ヒントのリスト（MainPageから渡された）
     const hintList: HintList[] = props.hintList;
+    const stepNo: number = props.stepNo;
+    const stepName: string = props.stepName;
 
     const [hintIndex, setHintIndex] = useState<number>(0);
 
@@ -26,7 +30,7 @@ export const Assist = (props: Props) => {
     if (!explainIsShow) {
         return (
             <Container maxWidth="md">
-                <Typography variant="h4">STEP1</Typography>
+                <Typography variant="h4">STEP{stepNo}: {stepName}</Typography>
                 <Container maxWidth="md" sx={{marginBottom: "30px"}}>
                     <Stack spacing={2} sx={{marginBottom: "30px"}}>
                         {hintList.map((hint, index) => {

@@ -4,6 +4,7 @@ import { Assist } from "./Assist";
 import { Form } from "./Form";
 
 interface FormData {
+    stepName: string;
     hintList: HintList[];
 }
 
@@ -21,6 +22,7 @@ export const MainPage = () => {
 
     const formData: FormData[] = [
         {
+            "stepName": "ヘッダコメント",
             "hintList": [
                 {
                     "hint": "どのような処理を書けばよいのかわからない",
@@ -33,6 +35,7 @@ export const MainPage = () => {
             ]
         },
         {
+            "stepName": "インクルード・マクロ定義",
             "hintList": [
                 {
                     "hint": "どのような処理を書けばよいのかわからない",
@@ -49,6 +52,7 @@ export const MainPage = () => {
             ]
         },
         {
+            "stepName": "変数・配列の宣言",
             "hintList": [
                 {
                     "hint": "どのような処理を書けばよいのかわからない",
@@ -65,6 +69,7 @@ export const MainPage = () => {
             ]
         },
         {
+            "stepName": "繰り返し処理",
             "hintList": [
                 {
                     "hint": "どのような処理を書けばよいのかわからない",
@@ -85,6 +90,7 @@ export const MainPage = () => {
             ]
         },
         {
+            "stepName": "複数条件分岐",
             "hintList": [
                 {
                     "hint": "どのような処理を書けばよいのかわからない",
@@ -111,7 +117,7 @@ export const MainPage = () => {
             <Box>
             <Grid container spacing={2}>
                 <Grid item xs={5}>
-                    <Assist hintList={formData[formDataIndex].hintList} />
+                    <Assist stepNo={formDataIndex + 1} stepName={formData[formDataIndex].stepName} hintList={formData[formDataIndex].hintList} />
                 </Grid>
                 <Grid item xs={7}>
                     <Form changeFormDataIndex={changeFormDataIndex} />
