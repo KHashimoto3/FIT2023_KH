@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Button, Card, Container, Stack, Typography } from "@mui/material";
+import { Button, Card, Container, Stack, Typography, Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 type Props = {
     stepNo: number;
@@ -32,7 +33,7 @@ export const Assist = (props: Props) => {
             <Container maxWidth="md">
                 <Typography variant="h4">STEP{stepNo}: {stepName}</Typography>
                 <Container maxWidth="md" sx={{marginBottom: "30px"}}>
-                    <Stack spacing={2} sx={{marginBottom: "30px"}}>
+                    {/*<Stack spacing={2} sx={{marginBottom: "30px"}}>
                         {hintList.map((hint, index) => {
                             return (
                                 <Card key={index} style={{padding: "10px"}} sx={{ maxWidth: "500px"}}>
@@ -41,9 +42,30 @@ export const Assist = (props: Props) => {
                                     <Button size="small"  onClick={() => showExplain(index)}>ヒントを見る</Button>
                                  </Card>
                             )
+
                         })
                     }
-                     </Stack>
+                     </Stack>*/}
+                     <div>
+                        {hintList.map((hint, index) => {
+                            return (
+                                <Accordion>
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1a-content"
+                                        id="panel1a-header"
+                                    >
+                                        <Typography>{hint.hint}</Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                        <Typography>
+                                            {hint.explanation}
+                                        </Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+                            )
+                        })}
+                     </div>
                     <hr />
                     <Stack spacing={2}>
                         <Button size="small" variant="contained">知りたい情報はこの中にない</Button>
