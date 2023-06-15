@@ -28,14 +28,14 @@ export const Assist = (props: Props) => {
                      <div>
                         {hintList.map((hint, index) => {
                             return (
-                                <Accordion>
+                                <Accordion key={hint.hint}>
                                     <AccordionSummary
                                         expandIcon={<ExpandMoreIcon />}
                                         aria-controls="panel1a-content"
                                         id="panel1a-header"
                                         sx={{backgroundColor: "#e3f4ff"}}
                                     >
-                                        <Typography>{hint.hint}</Typography>
+                                        <Typography>つまずき{index + 1}：{hint.hint}</Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
                                         <Typography>
