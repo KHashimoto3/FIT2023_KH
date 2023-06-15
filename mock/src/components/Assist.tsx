@@ -33,6 +33,7 @@ export const Assist = (props: Props) => {
                                         expandIcon={<ExpandMoreIcon />}
                                         aria-controls="panel1a-content"
                                         id="panel1a-header"
+                                        sx={{backgroundColor: "#e3f4ff"}}
                                     >
                                         <Typography>{hint.hint}</Typography>
                                     </AccordionSummary>
