@@ -21,31 +21,10 @@ export const Assist = (props: Props) => {
 
     const [hintIndex, setHintIndex] = useState<number>(0);
 
-    const [explainIsShow, setExplainIsShow] = useState<boolean>(false);
-
-    const showExplain = (index: number) => {
-        setHintIndex(index);
-        setExplainIsShow(true);
-    }
-
-    if (!explainIsShow) {
         return (
             <Container maxWidth="md">
                 <Typography variant="h4">STEP{stepNo}: {stepName}</Typography>
                 <Container maxWidth="md" sx={{marginBottom: "30px"}}>
-                    {/*<Stack spacing={2} sx={{marginBottom: "30px"}}>
-                        {hintList.map((hint, index) => {
-                            return (
-                                <Card key={index} style={{padding: "10px"}} sx={{ maxWidth: "500px"}}>
-                                    <Typography variant="h6" style={{color: "#0288d1"}}>つまずき{index + 1}</Typography>
-                                    <Typography variant="h5">{hint.hint}</Typography>
-                                    <Button size="small"  onClick={() => showExplain(index)}>ヒントを見る</Button>
-                                 </Card>
-                            )
-
-                        })
-                    }
-                     </Stack>*/}
                      <div>
                         {hintList.map((hint, index) => {
                             return (
@@ -74,13 +53,4 @@ export const Assist = (props: Props) => {
                 </Container>
             </Container>
         )
-    } else {
-        return (
-            <Container maxWidth="md">
-                <Typography variant="h4">ヒント</Typography>
-                <Button size="small" variant="contained" onClick={() => setExplainIsShow(false)}>戻る</Button>
-                <Typography variant="h5">説明：{hintList[hintIndex].explanation}</Typography>
-            </Container>
-        )
-    }
 };
