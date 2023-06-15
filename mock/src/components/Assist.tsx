@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Button, Card, Container, Stack, Typography, Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
+import { Button, Container, Stack, Typography, Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 type Props = {
@@ -18,8 +17,6 @@ export const Assist = (props: Props) => {
     const hintList: HintList[] = props.hintList;
     const stepNo: number = props.stepNo;
     const stepName: string = props.stepName;
-
-    const [hintIndex, setHintIndex] = useState<number>(0);
 
         return (
             <Container maxWidth="md">
