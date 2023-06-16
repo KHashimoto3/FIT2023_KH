@@ -77,7 +77,7 @@ export const MainPage = () => {
                 },
                 {
                     "hint": "forの書き方がわからない",
-                    "explanation": "説明2"
+                    "explanation": "for (初期化式; 条件式; 更新式) {\n// 繰り返し実行する文\n}"
                 },
                 {
                     "hint": "条件の書き方がわからない",

@@ -32,11 +32,17 @@ export const Assist = (props: Props) => {
                                         id="panel1a-header"
                                         sx={{backgroundColor: "#e3f4ff"}}
                                     >
-                                        <Typography>つまずき{index + 1}：{hint.hint}</Typography>
+                                        <Typography variant="h5">つまずき{index + 1}：{hint.hint}</Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
-                                        <Typography>
-                                            {hint.explanation}
+                                        <Typography variant="h6">
+                                            for文の書き方
+                                        </Typography>
+                                        <textarea style={{fontSize: "14pt"}} cols={30} rows={3}>{hint.explanation}</textarea><br />
+                                        <Typography variant="body1">
+                                        初期化式：ループ変数や制御変数の初期値を設定します。通常、カウンタ変数を初期化するために使用されます。<br />
+条件式：ループの継続条件を指定します。条件が真である限りループが続行されます。ループが始まる前に条件式が評価され、条件が偽である場合はループは実行されません。<br />
+更新式：ループ変数や制御変数の更新を行います。通常、カウンタ変数を増加または減少させるために使用されます。
                                         </Typography>
                                     </AccordionDetails>
                                 </Accordion>
