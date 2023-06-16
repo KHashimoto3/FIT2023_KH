@@ -18,6 +18,13 @@ export const Assist = (props: Props) => {
     const stepNo: number = props.stepNo;
     const stepName: string = props.stepName;
 
+    const grammerCodeStyle = {
+        backgroundColor: "#363636",
+        fontSize: "14pt",
+        color: "#fff",
+        width: "100%"
+    };
+
         return (
             <Container maxWidth="md">
                 <Typography variant="h4">STEP{stepNo}: {stepName}</Typography>
@@ -38,11 +45,12 @@ export const Assist = (props: Props) => {
                                         <Typography variant="h6">
                                             for文の書き方
                                         </Typography>
-                                        <textarea style={{fontSize: "14pt"}} cols={30} rows={3}>{hint.explanation}</textarea><br />
+                                        <textarea style={grammerCodeStyle}  cols={40} rows={4}>{hint.explanation}</textarea><br />
                                         <Typography variant="body1">
-                                        初期化式：ループ変数や制御変数の初期値を設定します。通常、カウンタ変数を初期化するために使用されます。<br />
-条件式：ループの継続条件を指定します。条件が真である限りループが続行されます。ループが始まる前に条件式が評価され、条件が偽である場合はループは実行されません。<br />
-更新式：ループ変数や制御変数の更新を行います。通常、カウンタ変数を増加または減少させるために使用されます。
+                                        カウンタ変数の初期化：何回目のループかをカウントする変数を初期化します。通常は0で初期化します。<br />
+継続条件：ループの中身に書く処理を、何の条件を満たす間行うかを条件式で設定します。<br />
+カウンタの増減：ループの中身の処理を一回実行した時に、カウンタ変数をどのように増減するかを設定します。通常は１つずつ増やすカウントアップを行います。
+
                                         </Typography>
                                     </AccordionDetails>
                                 </Accordion>
