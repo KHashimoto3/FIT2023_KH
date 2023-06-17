@@ -20,7 +20,6 @@ jobs:
         working-directory: ./mock
         run: npm install; npm run build;
       - name: step5
-        working-directory: ./mock
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
