@@ -19,3 +19,4 @@ jobs:
       - name: step4
         working-directory: ./mock
         run: ls
+        run: npm run build
