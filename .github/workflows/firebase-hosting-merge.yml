@@ -8,6 +8,9 @@ name: Deploy to Firebase Hosting on merge
       - main
 jobs:
   build_and_deploy:
+    defaults:
+      run:
+        working-directory: ./mock
     runs-on: ubuntu-latest
     steps:
       - name: step1
@@ -17,10 +20,8 @@ jobs:
       - name: step3
         run: ls
       - name: step4
-        working-directory: ./mock
         run: npm install; npm run build;
       - name: step5
-        run: cd ./mock
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
