@@ -11,3 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "this is pen"
+      - uses: actions/checkout@v3
+      - run: ls -al
