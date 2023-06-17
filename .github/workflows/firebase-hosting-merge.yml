@@ -10,7 +10,9 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "this is pen"
-      - uses: actions/checkout@v3
-      - run: ls
-      - run: ls
+      - name: step1
+        run: echo "this is pen"
+      - name: step2
+        uses: actions/checkout@v3
+      - name: step3
+        run: ls
