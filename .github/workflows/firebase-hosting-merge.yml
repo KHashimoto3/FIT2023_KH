@@ -17,12 +17,3 @@ jobs:
         uses: actions/checkout@v3
       - name: step3
         run: ls
-      - name: step4
-        run: npm install; npm run build;
-      - name: step5
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_FIT2023_PROTOTYPE }}"
-          channelId: live
-          projectId: fit2023-prototype
